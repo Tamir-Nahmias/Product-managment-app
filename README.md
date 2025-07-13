@@ -55,19 +55,22 @@ and set your connection string as follows :
 
 Navigate to the backend folder:
 
-```cd backend/ProductManagementApp
+```bash
+cd backend/ProductManagementApp
 
 ```
 
 If you don't have dotnet-ef installed run the following command:
 
-```dotnet tool install --global dotnet-ef
+```powershell
+dotnet tool install --global dotnet-ef
 
 ```
 
 then run :
 
-```dotnet ef database update
+```powershell
+dotnet ef database update
 
 ```
 
@@ -75,7 +78,8 @@ to create the database with its schemas
 
 ### Step 4: Run the Backend Server
 
-```dotnet run
+```bash
+dotnet run
 
 ```
 
@@ -83,7 +87,8 @@ to create the database with its schemas
 
 To allow the Angular frontend to communicate with the API, make sure CORS is enabled in Program.cs:
 
-```builder.Services.AddCors(options =>
+```
+builder.Services.AddCors(options =>
 {
 options.AddPolicy("AllowLocalAngular", policy =>
 {
@@ -100,7 +105,7 @@ app.UseCors("AllowLocalAngular");
 
 In a new terminal window:
 
-```
+```bash
 cd frontend/product-task
 npm install
 ng serve
@@ -116,7 +121,7 @@ This project uses Entity Framework Code First, so the database schema is generat
 
 Any changes to models should be followed by:
 
-```
+```powershell
 dotnet ef migrations add YourMigrationName
 dotnet ef database update
 ```
