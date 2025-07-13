@@ -42,7 +42,8 @@ cd Product-managment-app
 ### Step 2: Configure SQL Server
 
 Make sure SQL Server is running locally or on a remote machin
-then open the file : backend/ProductManagementApp/appsettings.json
+then open the file :
+` backend/ProductManagementApp/appsettings.json`
 and set your connection string as follows :
 
 ```"ConnectionStrings": {
@@ -52,22 +53,24 @@ and set your connection string as follows :
 
 ### Step 3: Run EF Core Migrations (Code First)
 
-Navigate to the backend folder: cd backend/ProductManagementApp
+Navigate to the backend folder:
+`cd backend/ProductManagementApp`
 If you don't have dotnet-ef installed run the following command:
-dotnet tool install --global dotnet-ef
+
+`dotnet tool install --global dotnet-ef`
 then run :
-dotnet ef database update
+`dotnet ef database update`
 to create the database with its schemas
 
 ### Step 4: Run the Backend Server
 
-dotnet run
+`dotnet run`
 
 ### Step 5: Enable CORS for Angular
 
 To allow the Angular frontend to communicate with the API, make sure CORS is enabled in Program.cs:
 
-builder.Services.AddCors(options =>
+```builder.Services.AddCors(options =>
 {
 options.AddPolicy("AllowLocalAngular", policy =>
 {
@@ -78,13 +81,17 @@ policy.WithOrigins("http://localhost:4200")
 });
 
 app.UseCors("AllowLocalAngular");
+```
 
 ### Step 6: Run the Frontend (Angular)
 
 In a new terminal window:
-cd frontend/product-task
+
+```cd frontend/product-task
 npm install
 ng serve
+```
+
 The app will be available at: http://localhost:4200
 
 Importnant! Make sure this matches the origin defined in the CORS policy.
@@ -95,7 +102,8 @@ This project uses Entity Framework Code First, so the database schema is generat
 
 Any changes to models should be followed by:
 
-dotnet ef migrations add YourMigrationName
+```dotnet ef migrations add YourMigrationName
 dotnet ef database update
+```
 
 The solution and folder structure are organized clearly into backend/ and frontend/.
