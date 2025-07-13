@@ -131,3 +131,18 @@ dotnet ef database update
 ```
 
 The solution and folder structure are organized clearly into backend/ and frontend/.
+
+## Screenshots
+
+### Home Page
+
+![Home Page](assets/screenshots/products.jpg)
+
+### Product Form
+
+![Form](assets/screenshots/edit-form.jpg)
+![Form](assets/screenshots/form-add.jpg)
+
+### Products Details
+
+![Product Details](assests/screenshots/product-details.jpg)

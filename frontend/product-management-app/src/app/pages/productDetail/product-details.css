@@ -19,10 +19,12 @@ input[type="text"] {
 }
 
 ul {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
   list-style: none;
   padding: 0;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
 }
 
 li {
@@ -32,7 +34,7 @@ li {
 
 .product-container {
   background-color: rgb(245, 245, 245);
-  width: 50%;
+  width: fit-content;
   max-width: 60%;
   border-radius: 15px;
   padding: 1.5rem;
