@@ -43,7 +43,11 @@ cd Product-managment-app
 
 Make sure SQL Server is running locally or on a remote machin
 then open the file :
-` backend/ProductManagementApp/appsettings.json`
+
+```bash
+ backend/ProductManagementApp/appsettings.json
+```
+
 and set your connection string as follows :
 
 ```"ConnectionStrings": {
