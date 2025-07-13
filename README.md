@@ -136,12 +136,12 @@ The solution and folder structure are organized clearly into backend/ and fronte
 
 ### Home Page
 
-![Home Page](assets/screenshots/products.jpg)
+![Home Page](assests/screenshots//products.jpg)
 
 ### Product Form
 
-![Form](assets/screenshots/edit-form.jpg)
-![Form](assets/screenshots/form-add.jpg)
+![Form](assests/screenshots/edit-form.jpg)
+![Form](assests/screenshots/form-add.jpg)
 
 ### Products Details
 
