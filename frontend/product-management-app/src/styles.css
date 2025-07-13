@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: "Golos Text", sans-serif;
+  background-color: rgb(250, 250, 250);
+  color: rgb(51, 51, 51);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Golos Text", sans-serif;
+  font-weight: 600;
+  margin: 1.2rem 0 0.8rem;
+  color: rgb(44, 62, 80);
+  letter-spacing: 0.5px;
+  justify-self: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: rgb(0, 119, 204);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: rgb(0, 95, 163);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: rgb(0, 64, 128);
+}
+
+h4 {
+  font-size: 1.3rem;
+  color: rgb(51, 51, 51);
+}

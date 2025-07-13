@@ -1,0 +1,33 @@
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: rgb(245, 245, 245);
+  border-radius: 15px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(0, 123, 255);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+nav a:hover {
+  background-color: rgb(224, 240, 255);
+  color: rgb(0, 86, 179);
+}
+
+main.content {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "Id": 1,
+    "Name": "Laptop Pro 15",
+    "Price": 5000.99,
+    "Description": "Powerful 15-inch laptop for developers",
+    "Image": "https://www.xiaomibase.com/wp-content/uploads/2021/04/portatil-Xiaomi-Mi-Notebook-Pro-15-2021-Espana-comprar-a.png",
+    "IsSellable": false,
+    "ItemsInStock": 20
+  },
+  {
+    "Id": 5,
+    "Name": "4K Monitor 27\u0022",
+    "Price": 1299,
+    "Description": "27-inch UHD 4K monitor with HDR support",
+    "Image": "https://m.media-amazon.com/images/I/71A7Hd\u002B5HcL._AC_SX466_.jpg",
+    "IsSellable": true,
+    "ItemsInStock": 8
+  },
+  {
+    "Id": 7,
+    "Name": "Samsung EarBuds 2 Pro",
+    "Price": 209.99,
+    "Description": "Amazing wireless earphones",
+    "Image": "https://m.media-amazon.com/images/I/61P8aXSg0CL._AC_SX679_.jpg",
+    "IsSellable": true,
+    "ItemsInStock": 20
+  }
+]

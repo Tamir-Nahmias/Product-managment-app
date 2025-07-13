@@ -1,0 +1,67 @@
+<h2>{{ mode || "" }} product form</h2>
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Name:</label>
+    <input type="text" formControlName="name" />
+    <div *ngIf="f['name'].invalid && f['name'].touched" style="color: red">
+      Name is a mandatory field
+    </div>
+  </div>
+
+  <div>
+    <label>Price:</label>
+    <input type="number" formControlName="price" />
+    <div *ngIf="f['price'].invalid && f['price'].touched" style="color: red">
+      <div *ngIf="f['price'].errors?.['required']">Price is required</div>
+      <div *ngIf="f['price'].errors?.['min']">Price must be at least 0</div>
+    </div>
+  </div>
+
+  <div>
+    <label>Description:</label>
+    <textarea formControlName="description"></textarea>
+  </div>
+
+  <div>
+    <label>Image URL:</label>
+    <input
+      type="text"
+      formControlName="image"
+      placeholder="https://example.com/images/example.jpg"
+    />
+    <div *ngIf="f['image'].invalid && f['image'].touched" style="color: red">
+      Invalid image URL (must start with http and end with jpg/png/gif)
+    </div>
+  </div>
+
+  <div>
+    <label>Items in Stock:</label>
+    <input type="number" formControlName="itemsInStock" />
+    <div
+      *ngIf="f['itemsInStock'].invalid && f['itemsInStock'].touched"
+      style="color: red"
+    >
+      <div *ngIf="f['itemsInStock'].errors?.['required']">
+        Stock is a mandatory field
+      </div>
+      <div *ngIf="f['itemsInStock'].errors?.['min']">Must be at least 0</div>
+      <div *ngIf="f['itemsInStock'].errors?.['max']">Must be 1000 or less</div>
+    </div>
+  </div>
+
+  <div>
+    <label>
+      <input type="checkbox" formControlName="isSellable" />
+      Is Sellable
+    </label>
+  </div>
+
+  <div style="margin-top: 1rem">
+    <button type="submit" [disabled]="productForm.invalid">
+      {{ mode === "edit" ? "Update Product" : "Add Product" }}
+    </button>
+    <button type="button" class="cancel-btn" (click)="handleCancel()">
+      Cancel
+    </button>
+  </div>
+</form>

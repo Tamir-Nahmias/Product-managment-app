@@ -1,0 +1,19 @@
+<h2>Product Details</h2>
+<label>Search product</label>
+<input
+  type="text"
+  [(ngModel)]="searchedProduct"
+  (ngModelChange)="onSearchChange()"
+/>
+<ul>
+  <li *ngFor="let product of products$ | async; trackBy: trackById">
+    <div class="product-container">
+      <h3>{{ product.name }}</h3>
+      <div><img [src]="product.image" alt="product image" /></div>
+      <p><b>Description</b> : {{ product.description }}</p>
+      <p><b>Price</b> {{ product.price }}</p>
+      <p><b>for sale</b> : {{ product.isSellable ? "Yes" : "No" }}</p>
+      <p><b>inventory</b>: {{ product.itemsInStock }}</p>
+    </div>
+  </li>
+</ul>
