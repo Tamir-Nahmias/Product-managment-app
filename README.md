@@ -54,17 +54,30 @@ and set your connection string as follows :
 ### Step 3: Run EF Core Migrations (Code First)
 
 Navigate to the backend folder:
-`cd backend/ProductManagementApp`
+
+```cd backend/ProductManagementApp
+
+```
+
 If you don't have dotnet-ef installed run the following command:
 
-`dotnet tool install --global dotnet-ef`
+```dotnet tool install --global dotnet-ef
+
+```
+
 then run :
-`dotnet ef database update`
+
+```dotnet ef database update
+
+```
+
 to create the database with its schemas
 
 ### Step 4: Run the Backend Server
 
-`dotnet run`
+```dotnet run
+
+```
 
 ### Step 5: Enable CORS for Angular
 
@@ -87,7 +100,8 @@ app.UseCors("AllowLocalAngular");
 
 In a new terminal window:
 
-```cd frontend/product-task
+```
+cd frontend/product-task
 npm install
 ng serve
 ```
@@ -102,7 +116,8 @@ This project uses Entity Framework Code First, so the database schema is generat
 
 Any changes to models should be followed by:
 
-```dotnet ef migrations add YourMigrationName
+```
+dotnet ef migrations add YourMigrationName
 dotnet ef database update
 ```
 
