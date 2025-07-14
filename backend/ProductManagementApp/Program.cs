@@ -1,9 +1,6 @@
-using ProductManagementApp
-.Services;
-using ProductManagementApp
-.Repository;
-using ProductManagementApp
-.Config;
+using ProductManagementApp.Services;
+using ProductManagementApp.Repository;
+using ProductManagementApp.Config;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
