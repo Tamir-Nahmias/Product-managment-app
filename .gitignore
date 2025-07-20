@@ -10,6 +10,7 @@
 **/obj/
 *.user
 *.suo
+**/publish/
 
 # Environment files
 **/.env

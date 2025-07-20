@@ -28,7 +28,7 @@ builder.Services.AddControllers();
 var app = builder.Build();
 app.MapGet("/", () => "Server is up and running");
 app.UseCors($"allow localhost:{PORT}");
-
+app.Urls.Add("http://*:5000");// for Amzon EC2 vm access
 app.MapControllers();
 
 app.Run();
